@@ -1,0 +1,212 @@
+@media screen and (max-width: 1230px) {
+  .subscribe {
+    grid-template-columns: minmax(200px, 80%);
+    grid-row-gap: 35px;
+  }
+  .subscribe__form {
+    grid-row-gap: 25px;
+  }
+}
+
+@media (min-width: 1045px) and (max-width: 1230px) {
+  .card-info__item:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-template-areas:
+      "logo nav"
+      "count-info phone-info";
+  }
+  .nav__list {
+    text-align: right;
+  }
+  .count-info {
+    padding-top: 10px;
+  }
+  .subscribe {
+    grid-template-columns: minmax(200px, 100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo menu-burger"
+      "count-info phone-info";
+  }
+  .nav {
+    display: block;
+    position: absolute;
+    background: rgb(245, 246, 246);
+    box-shadow: #ccc;
+    width: 100%;
+    transition: all 0.4s ease;
+    top: -350px;
+  }
+  .nav__list {
+    display: block;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .nav.open-menu {
+    top: 100px;
+  }
+  .nav__item {
+    margin: 40px 0px 40px;
+    font-size: 14px;
+  }
+  .nav__item a {
+    color: #000;
+    font-weight: 700;
+  }
+  .nav__item a:hover {
+    border-bottom: 0;
+  }
+  .menu-burger {
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    display: block;
+    right: 15px;
+    top: 10px;
+    margin-top: 12px;
+  }
+  .menu-burger span,
+  .menu-burger:after,
+  .menu-burger:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    margin: 0 auto;
+  }
+  .menu-burger span {
+    top: 16px;
+  }
+  .menu-burger:after,
+  .menu-burger:before {
+    content: "";
+  }
+  .menu-burger:after {
+    bottom: 5px;
+  }
+  .menu-burger:before {
+    top: 5px;
+  }
+  .menu-burger.open-menu span {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .menu-burger.open-menu:before {
+    transform: rotate(38deg);
+    top: 16px;
+    transition: 0.4s;
+  }
+  .menu-burger.open-menu:after {
+    transform: rotate(-38deg);
+    bottom: 16px;
+    transition: 0.4s;
+  }
+  .phone-info {
+    margin-top: 11px;
+  }
+  .count-info {
+    align-self: end;
+  }
+  .subscribe__form {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  }
+  input[type="email"] {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  input[type="submit"] {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 20px;
+  }
+  .subscribe__label {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .header {
+    background-position: 40% center;
+  }
+  .header .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo menu-burger"
+      "phone-info phone-info"
+      "count-info count-info";
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .phone-info {
+    justify-self: center;
+    margin-top: 0px;
+  }
+  .phone-info__text {
+    float: none;
+    text-align: center;
+  }
+  .count-info {
+    justify-self: center;
+    font-size: 32px;
+  }
+  .sort {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 100%));
+    grid-row-gap: 30px;
+    padding-left: 36px;
+    padding-right: 15px;
+  }
+  .sort__field:nth-of-type(1) {
+    margin-left: 0px;
+  }
+  .card {
+    border-radius: 0px;
+  }
+  .card-list {
+    gap: 0px;
+  }
+  .card__button {
+    border-radius: 0px;
+  }
+  .card-list-section .wrapper {
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      "btn-load-more-wrapper btn-load-more-wrapper btn-load-more-wrapper";
+  }
+  .btn-load-more-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .subscribe {
+    justify-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .subscribe__box {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 397px) {
+  .card-info__item:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+}
